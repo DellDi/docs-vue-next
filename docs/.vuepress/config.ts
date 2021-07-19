@@ -53,14 +53,9 @@ export default defineUserConfig<DefaultThemeOptions>({
   // site-level locales config
   locales: {
     '/': {
-      lang: 'en-US',
-      title: 'VuePress',
-      description: 'Vue-powered Static Site Generator',
-    },
-    '/zh/': {
       lang: 'zh-CN',
       title: 'VuePress',
-      description: 'Vue 驱动的静态网站生成器',
+      description: 'CN',
     },
   },
 
@@ -87,27 +82,13 @@ export default defineUserConfig<DefaultThemeOptions>({
        */
       '/': {
         // navbar
-        navbar: navbar.en,
-
-        // sidebar
-        sidebar: sidebar.en,
-
-        // page meta
-        editLinkText: 'Edit this page on GitHub',
-      },
-
-      /**
-       * Chinese locale config
-       */
-      '/zh/': {
-        // navbar
-        navbar: navbar.zh,
+        navbar: navbar,
         selectLanguageName: '简体中文',
         selectLanguageText: '选择语言',
         selectLanguageAriaLabel: '选择语言',
 
         // sidebar
-        sidebar: sidebar.zh,
+        sidebar: sidebar,
 
         // page meta
         editLinkText: '在 GitHub 上编辑此页',
@@ -166,14 +147,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         },
       },
     ],
-    [
-      '@vuepress/plugin-google-analytics',
-      {
-        // we have multiple deployments, which would use different id
-        id: process.env.DOCS_GA_ID,
-      },
-    ],
-    ['@vuepress/plugin-pwa'],
+
     [
       '@vuepress/plugin-pwa-popup',
       {
