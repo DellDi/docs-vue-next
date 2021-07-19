@@ -1,0 +1,16 @@
+{
+  "name": "delldi",
+  "version": "1.0.0",
+  "description": "博客，组件，文档",
+  "main": "index.js",
+  "author": "“ <875372314@qq.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.21"
+  }
+}
