@@ -6,7 +6,7 @@ import { navbar, sidebar } from './configs'
 const isProd = process.env.NODE_ENV === 'production'
 
 export default defineUserConfig<DefaultThemeOptions>({
-  base: '/',
+  base: '/ns-docs/',
 
   head: [
     [
