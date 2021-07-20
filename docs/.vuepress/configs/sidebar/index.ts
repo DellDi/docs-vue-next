@@ -5,7 +5,7 @@ export const zh: SidebarConfig = {
     {
       text: '指南',
       children: [
-        '/guide/README.md',
+        '/guide/asset.md',
         '/guide/getting-started.md',
         '/guide/configuration.md',
         '/guide/page.md',

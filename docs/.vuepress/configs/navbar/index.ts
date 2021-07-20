@@ -106,21 +106,21 @@ export const zh: NavbarConfig = [
       },
     ],
   },
-  {
-    text: `${version}`,
-    children: [
-      {
-        text: '更新日志',
-        link: 'https://github.com/vuepress/vuepress-next/blob/main/CHANGELOG.md',
-      },
-      {
-        text: 'v1.x',
-        link: 'https://v1.vuepress.vuejs.org/',
-      },
-      {
-        text: 'v0.x',
-        link: 'https://v0.vuepress.vuejs.org/',
-      },
-    ],
-  },
+  // {
+  //   text: `${version}`,
+  //   children: [
+  //     {
+  //       text: '更新日志',
+  //       link: 'https://github.com/vuepress/vuepress-next/blob/main/CHANGELOG.md',
+  //     },
+  //     {
+  //       text: 'v1.x',
+  //       link: 'https://v1.vuepress.vuejs.org/',
+  //     },
+  //     {
+  //       text: 'v0.x',
+  //       link: 'https://v0.vuepress.vuejs.org/',
+  //     },
+  //   ],
+  // },
 ]

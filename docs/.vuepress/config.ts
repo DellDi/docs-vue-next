@@ -54,16 +54,10 @@ export default defineUserConfig<DefaultThemeOptions>({
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'VuePress',
-      description: 'CN',
+      title: '设计中心',
+      description: '帮助说明',
     },
   },
-
-  bundler:
-    // specify bundler via environment variable
-    process.env.DOCS_BUNDLER ??
-    // use vite in dev, use webpack in prod
-    (isProd ? '@vuepress/webpack' : '@vuepress/vite'),
 
   themeConfig: {
     logo: '/images/hero.png',
@@ -81,7 +75,6 @@ export default defineUserConfig<DefaultThemeOptions>({
        * we don't need to set all of the locale fields
        */
       '/': {
-        // navbar
         navbar: navbar,
         selectLanguageName: '简体中文',
         selectLanguageText: '选择语言',
@@ -131,48 +124,42 @@ export default defineUserConfig<DefaultThemeOptions>({
   },
 
   plugins: [
-    ['@vuepress/plugin-debug'],
-    [
-      '@vuepress/plugin-docsearch',
-      {
-        apiKey: '3a539aab83105f01761a137c61004d85',
-        indexName: 'vuepress',
-        searchParameters: {
-          facetFilters: ['tags:v2'],
-        },
-        locales: {
-          '/zh/': {
-            placeholder: '搜索文档',
-          },
-        },
-      },
-    ],
+    // ['@vuepress/plugin-debug'],
+    ['@vuepress/plugin-back-to-top'],
+    // [
+    //   '@vuepress/plugin-search',
+    //   {
+    //     '/': {
+    //       placeholder: '搜索',
+    //     },
+    //   },
+    // ],
 
-    [
-      '@vuepress/plugin-pwa-popup',
-      {
-        locales: {
-          '/zh/': {
-            message: '发现新内容可用',
-            buttonText: '刷新',
-          },
-        },
-      },
-    ],
-    [
-      '@vuepress/plugin-register-components',
-      {
-        componentsDir: path.resolve(__dirname, './components'),
-      },
-    ],
+    // [
+    //   '@vuepress/plugin-pwa-popup',
+    //   {
+    //     locales: {
+    //       '/zh/': {
+    //         message: '发现新内容可用',
+    //         buttonText: '刷新',
+    //       },
+    //     },
+    //   },
+    // ],
+    // [
+    //   '@vuepress/plugin-register-components',
+    //   {
+    //     componentsDir: path.resolve(__dirname, './components'),
+    //   },
+    // ],
     // only enable shiki plugin in production mode
-    [
-      '@vuepress/plugin-shiki',
-      isProd
-        ? {
-            theme: 'dark-plus',
-          }
-        : false,
-    ],
+    // [
+    //   '@vuepress/plugin-shiki',
+    //   isProd
+    //     ? {
+    //         theme: 'dark-plus',
+    //       }
+    //     : false,
+    // ],
   ],
 })
