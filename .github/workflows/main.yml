@@ -15,11 +15,11 @@ jobs:
       - uses: srt32/git-actions@v0.0.3
         with:
           args: git submodule update --init --recursive
-      # 使用 node:14
-      - name: use Node.js 14
+      # 使用 node:12
+      - name: use Node.js 12
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '12'
           cache: 'yarn'
       # npm install
       - name: yarn install
