@@ -6,7 +6,7 @@ import { navbar, sidebar } from './configs'
 const isProd = process.env.NODE_ENV === 'production'
 
 export default defineUserConfig<DefaultThemeOptions>({
-  base: '/ns-docs/',
+  base: '/docs-vue-next/',
 
   head: [
     [
@@ -62,7 +62,8 @@ export default defineUserConfig<DefaultThemeOptions>({
   themeConfig: {
     logo: '/images/hero.png',
 
-    repo: 'vuepress/vuepress-next',
+    repo: 'https://github.com/vuejs/vuepress',
+    repoLabel: '地址',
 
     docsDir: 'docs',
 
@@ -125,23 +126,20 @@ export default defineUserConfig<DefaultThemeOptions>({
 
   plugins: [
     // ['@vuepress/plugin-debug'],
-    ['@vuepress/plugin-back-to-top'],
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10
+    }]
     // [
-    //   '@vuepress/plugin-search',
+    //   '@vuepress/plugin-docsearch',
     //   {
-    //     '/': {
-    //       placeholder: '搜索',
+    //     apiKey: '3a539aab83105f01761a137c61004d85',
+    //     indexName: 'vuepress',
+    //     searchParameters: {
+    //       facetFilters: ['tags:v2'],
     //     },
-    //   },
-    // ],
-
-    // [
-    //   '@vuepress/plugin-pwa-popup',
-    //   {
     //     locales: {
-    //       '/zh/': {
-    //         message: '发现新内容可用',
-    //         buttonText: '刷新',
+    //       '/': {
+    //         placeholder: '搜索文档',
     //       },
     //     },
     //   },

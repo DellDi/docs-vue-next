@@ -79,33 +79,6 @@ export const zh: NavbarConfig = [
       },
     ],
   },
-  {
-    text: '了解更多',
-    children: [
-      {
-        text: '深入',
-        children: [
-          '/advanced/architecture.md',
-          '/advanced/plugin.md',
-          '/advanced/theme.md',
-          {
-            text: 'Cookbook',
-            link: '/advanced/cookbook/',
-          },
-        ],
-      },
-      {
-        text: '其他资源',
-        children: [
-          '/contributing.md',
-          {
-            text: 'Awesome VuePress',
-            link: 'https://github.com/vuepress/awesome-vuepress',
-          },
-        ],
-      },
-    ],
-  },
   // {
   //   text: `${version}`,
   //   children: [
